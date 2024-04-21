@@ -461,6 +461,7 @@ body {
     margin-left: 25.7rem;
     gap: 2rem;
     transition: all 250ms ease-in-out;
+    cursor: pointer;
 }
 
 #ctmbutton {
@@ -472,6 +473,7 @@ body {
     border-radius: 10px;
     font-weight: 300;
     font-size: large;
+    cursor: pointer;
 }
 
 #ctmbutton #ctme {
