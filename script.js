@@ -274,6 +274,7 @@ function toastNotify(alt, alm, alttype, altclr) {
   ntprog.classList.add("ntact");
 
   setTimeout(() => {
+    alticon.classList.remove(alttype)
     toast.classList.remove("ntact");
   }, 5000);
 
@@ -283,6 +284,7 @@ function toastNotify(alt, alm, alttype, altclr) {
 }
 
 ntclose.addEventListener("click", () => {
+  alticon.classList.remove(alttype)
   toast.classList.remove("ntact");
 
   setTimeout(() => {
