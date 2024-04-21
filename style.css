@@ -476,6 +476,7 @@ body {
 
 #ctmbutton #ctme {
     position: relative;
+    cursor: pointer;
 }
 
 #ctmbutton::before {
