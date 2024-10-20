@@ -983,6 +983,7 @@ body {
 .pjimg {
     margin-top: 10px;
     height: 120px;
+    width: 80%;
     border-radius: 10px;
     z-index: 1;
 }
