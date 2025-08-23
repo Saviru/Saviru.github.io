@@ -18,7 +18,7 @@
 
 console.log("Welcome to Saviru's portfolio !")
 
-title = "Hi there, I'm Saviru Kashmira Atapattu. Welcome to my portfolio !           ";
+const title = "Hi there, I'm Saviru Kashmira Atapattu. Welcome to my portfolio !           ";
 position = 0;
 function scrolltitle() {
     document.title = title.substring(position, title.length) + title.substring(0, position); 
@@ -54,8 +54,8 @@ window.onmousemove = function(e) {
 
 
 //navigation bar current page
-var header = document.getElementById("navigation");
-var btns = header.getElementsByClassName("url");
+let header = document.getElementById("navigation");
+let btns = header.getElementsByClassName("url");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
     var current = document.getElementsByClassName("active");
@@ -225,10 +225,10 @@ function sendMessage() {
     emailjs.init("CFVlg1m3TvKf2PC9Q");
   })();
 
-  var serviceID = "sv2006Saviru_PF.2024";
-  var templateID = "templ2006Saviru_PF.2024";
+  const serviceID = "sv2006Saviru_PF.2024";
+  const templateID = "templ2006Saviru_PF.2024";
 
-  var params = {
+  let params = {
     sendername:document.querySelector("#name").value,
     sendermail:document.querySelector("#email").value,
     subject:document.querySelector("#subject").value,
@@ -256,9 +256,9 @@ for(var ctmi=0; ctmi<cmlabel.length; ctmi++) {
 const toast = document.querySelector(".toastnt");
 const ntclose = document.querySelector(".ntclose");
 const ntprog = document.querySelector(".ntprog");
-var alttil = document.getElementById("alttil");
-var altmsg = document.getElementById("altmsg");
-var alticon = document.querySelector(".ntcheck");
+const alttil = document.getElementById("alttil");
+const altmsg = document.getElementById("altmsg");
+const alticon = document.querySelector(".ntcheck");
 const ntindi = document.querySelector(".toastnt")
 
 function toastNotify(alt, alm, alttype, altclr) {
@@ -291,3 +291,4 @@ ntclose.addEventListener("click", () => {
     ntprog.classList.remove("ntact");
   }, 300)
 });
+
