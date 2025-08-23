@@ -18,13 +18,13 @@
 
 console.log("Welcome to Saviru's portfolio !")
 
-title = "Hi there, I'm Saviru Kashmira Atapattu. Welcome to my portfolio !           ";
-position = 0;
+let title = "Hi there, I'm Saviru Kashmira Atapattu. Welcome to my portfolio !           ";
+const position = 0;
 function scrolltitle() {
     document.title = title.substring(position, title.length) + title.substring(0, position); 
     position++;
     if (position > title.length) position = 0;
-    titleScroll = window.setTimeout(scrolltitle,270);
+    let titleScroll = window.setTimeout(scrolltitle,270);
 }
 scrolltitle();
 
@@ -39,7 +39,7 @@ rowcol.style.setProperty("--rescol", colres);
 
 const numsq = colres * rowres ;
 
-for(var i = 0; i< numsq; i++){
+for(const i = 0; i< numsq; i++){
   let box = document.createElement('span');
   document.getElementById('container').appendChild(box);
 }
@@ -54,11 +54,11 @@ window.onmousemove = function(e) {
 
 
 //navigation bar current page
-var header = document.getElementById("navigation");
-var btns = header.getElementsByClassName("url");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
+const header = document.getElementById("navigation");
+const btns = header.getElementsByClassName("url");
+for (const btn of btns) {
+  btn.addEventListener("click", function() {
+    let current = document.getElementsByClassName("active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
@@ -97,9 +97,9 @@ function checkHeight() {
     toTop.style.display = "flex";
   } else {
     toTop.style.display = "none";
-    var currentnv = document.getElementsByClassName("active");
+    let currentnv = document.getElementsByClassName("active");
     currentnv[0].className = currentnv[0].className.replace(" active", "");
-    var homenv = document.getElementById("hmnav");
+    let homenv = document.getElementById("hmnav");
     homenv.className += " active";
   }
 }
@@ -211,8 +211,6 @@ copylink.addEventListener("click", () => {
   navigator.clipboard.writeText(window.location.href);
   donemsg.style.display = "inline";
 
-  const copytime = setTimeout(displaycopy, 1500)
-
   function displaycopy() {
     donemsg.style.display = "none";
   }
@@ -225,10 +223,10 @@ function sendMessage() {
     emailjs.init("CFVlg1m3TvKf2PC9Q");
   })();
 
-  var serviceID = "sv2006Saviru_PF.2024";
-  var templateID = "templ2006Saviru_PF.2024";
+  const serviceID = "sv2006Saviru_PF.2024";
+  const templateID = "templ2006Saviru_PF.2024";
 
-  var params = {
+  let params = {
     sendername:document.querySelector("#name").value,
     sendermail:document.querySelector("#email").value,
     subject:document.querySelector("#subject").value,
@@ -247,8 +245,10 @@ function sendMessage() {
 //contact input animations
 let cmlabel = document.querySelectorAll('.contlabel');
 
-for(var ctmi=0; ctmi<cmlabel.length; ctmi++) {
-  cmlabel[ctmi].innerHTML = cmlabel[ctmi].innerText.split('').map((cmlet, cml)=>`<span class="inputword" style="transition-delay: ${cml*30}ms;filter: hue-rotate(${cml*25}deg)";>${cmlet}</span>`).join('');
+for (const label of cmlabel) {
+  label.innerHTML = label.innerText.split('').map((cmlet, cml) => 
+    `<span class="inputword" style="transition-delay: ${cml*30}ms;filter: hue-rotate(${cml*25}deg)";>${cmlet}</span>`
+  ).join('');
 }
 
 //notification
@@ -256,9 +256,9 @@ for(var ctmi=0; ctmi<cmlabel.length; ctmi++) {
 const toast = document.querySelector(".toastnt");
 const ntclose = document.querySelector(".ntclose");
 const ntprog = document.querySelector(".ntprog");
-var alttil = document.getElementById("alttil");
-var altmsg = document.getElementById("altmsg");
-var alticon = document.querySelector(".ntcheck");
+const alttil = document.getElementById("alttil");
+const altmsg = document.getElementById("altmsg");
+const alticon = document.querySelector(".ntcheck");
 const ntindi = document.querySelector(".toastnt")
 
 function toastNotify(alt, alm, alttype, altclr) {
@@ -291,3 +291,4 @@ ntclose.addEventListener("click", () => {
     ntprog.classList.remove("ntact");
   }, 300)
 });
+
