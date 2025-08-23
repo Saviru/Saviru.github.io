@@ -39,13 +39,13 @@ rowcol.style.setProperty("--rescol", colres);
 
 const numsq = colres * rowres ;
 
-for(const i = 0; i< numsq; i++){
-  let box = document.createElement('span');
+for(let i = 0; i< numsq; i++){
+  const box = document.createElement('span');
   document.getElementById('container').appendChild(box);
 }
 
 
-let cursor = document.getElementById('cursor');
+const cursor = document.getElementById('cursor');
 window.onmousemove = function(e) {
   cursor.style.left = e.clientX + 'px';
   cursor.style.top = e.clientY + 'px';
@@ -291,4 +291,5 @@ ntclose.addEventListener("click", () => {
     ntprog.classList.remove("ntact");
   }, 300)
 });
+
 
