@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    font-family: "Monument Extended", Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    font-size: 1.5em;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+header,
+header:before {
+    background: radial-gradient(at bottom left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.400));
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+    height: 105%;
+
+}
+
+.databody {
+    z-index: 1;
+    position: absolute;
+    margin-top: 100vh;
+    background: black;
+    line-height: 30px;
+    font-weight: lighter;
+    padding: 40px;
+    color: white;
+    overflow-y: hidden;
+}
+
+nav {
+    z-index: 100;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 50px 30px;
+    width: 100%;
+    height: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.portfolios,
+.portfolios a {
+    display: flex;
+    font-size: 1.2em;
+    gap: 20px;
+    color: rgba(240, 240, 240, 0.712);
+    text-decoration: none;
+}
+
+.portfolios i:hover {
+    color: white;
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.logo {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.welcome-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 37px;
+    border-radius: 20px;
+    animation: animateWelcome 2.5s linear infinite;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+.name-highlight {
+    background: linear-gradient(90deg, #008baa, #7e42a7, #6600c5, #6070fd, #2a46ff, #0099ff, #008ead);
+    background-size: 300%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: navanimate 10s linear infinite;
+}
+
+.description {
+    color: #999999;
+}
+
+
+
+
+@keyframes navanimate {
+    to {
+        background-position: 400%;
+    }
+}
+
+@media (max-width: 900px) {
+    .logo {
+        display: none;
+    }
+
+    .portfolios {
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 655px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .navbar.active {
+        margin-top: 80px;
+        height: 300px;
+        transform: translateY(120px);
+    }
+
+    .navbar.active .toggleMenu {
+        transform: translateY(-180px);
+    }
+
+    .navbar li a.active {
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(99, 99, 99, 0.4));
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
+    }
+    
+}
+
+/*Browser Customizations*/
+::-webkit-scrollbar {
+    width: 2px;
+    background: rgb(59, 59, 59);
+}
+
+::-webkit-scrollbar:hover {
+    width: 8px;
+    background: rgb(59, 59, 59);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.57);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.57);
+    border-radius: 20px;
+}

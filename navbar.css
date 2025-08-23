@@ -1,0 +1,132 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(148, 148, 148, 0.26), rgba(68, 68, 68, 0.075));
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    border: 1px solid transparent;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+    border-radius: 10rem;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+
+}
+
+.navbar.active {
+    width: 600px;
+    border: 1px solid transparent;
+    box-shadow: -1px -1px 0 rgba(255, 255, 255, 0.2),
+    1px 1px 0 rgba(255, 255, 255, 0.2),
+    1px 1px 0 rgba(255, 255, 255, 0.2),
+    -1px -1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.navbar .toggleMenu {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(148, 148, 148, 0.26), rgba(68, 68, 68, 0.075));
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+    transition-delay: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar.active .toggleMenu {
+    background: linear-gradient(135deg, rgba(148, 148, 148, 0.26), rgba(68, 68, 68, 0.075));
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+    border: 1px solid transparent;
+    box-shadow: -1px -1px 0 rgba(255, 255, 255, 0.2),
+    1px 1px 0 rgba(255, 255, 255, 0.2),
+    1px 1px 0 rgba(255, 255, 255, 0.2),
+    -1px -1px 0 rgba(255, 255, 255, 0.2);
+    transition-delay: 0s;
+    transform: translateY(60px);
+    width: 30px;
+    height: 30px;
+}
+
+.navbar .toggleMenu::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: white;
+    transform: translateY(-5px);
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.navbar .toggleMenu::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: white;
+    transform: translateY(5px);
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+
+.navbar.active .toggleMenu::before {
+    transition-delay: 0s;
+    background: #fff;
+    transform: rotate(45deg) translateY(0) scale(0.6);
+}
+
+.navbar.active .toggleMenu::after {
+    transition-delay: 0s;
+    background: #fff;
+    transform: rotate(-45deg) translateY(0) scale(0.6);
+}
+
+.navbar li {
+    list-style: none;
+    transition: 0.3s;
+    transform: scale(0);
+}
+
+.navbar.active li {
+    transition-delay: 0.75s;
+    display: flex;
+    transform: scale(1);
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.navbar li a:hover {
+    background: linear-gradient(150deg, rgba(156, 156, 156, 0.308), rgba(0, 0, 0, 0));
+    transform: scale(1.1);
+}
+
+.navbar li a.activeLink {
+    font-weight: 600;
+    border-bottom: #e2e2e2e5 3px solid;
+}
+
+.description {
+    width: 50%;
+}
