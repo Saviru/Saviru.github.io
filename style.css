@@ -593,9 +593,8 @@ body {
     font-family: "Poppins", sans-serif;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
-    flex-flow: wrap;
     gap: 20px;
     left: 0;
     right: 0;
@@ -740,7 +739,6 @@ body {
     animation: glitch 650ms infinite;
     clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
     transform: translate(-0.025em, -0.0125em);
-    /* color: green; */
     opacity: 0.8;
 }
   
@@ -748,7 +746,6 @@ body {
     animation: glitch 375ms infinite;
     clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
     transform: translate(0.0125em, 0.025em);
-    /* color: red; */
     opacity: 0.8;
 }
 
@@ -926,9 +923,8 @@ body {
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
-    flex-wrap: wrap;
     justify-content: center;
-    flex-flow: wrap;
+    flex-flow: row wrap;
     gap: 1px;
     left: 0;
     right: 0;
@@ -1135,8 +1131,7 @@ footer {
     font-family: "Poppins", sans-serif;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
-    flex-flow: wrap;
+    flex-flow: row wrap;
     flex-direction: row;
     width: 100%;
     height: 20rem;
@@ -1232,7 +1227,6 @@ footer {
     content: attr(data-text);
     position: absolute;
     top: -39px;
-    left: 0;
     width: 100%;
     height: 40px;
     background: #3e3e3e;
@@ -2161,3 +2155,4 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(0deg, rgb(255, 0, 234), rgb(132, 0, 255), rgb(76, 0, 255));
 }
+
