@@ -1,0 +1,123 @@
+@property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 45deg;
+  inherits: false;
+}
+
+.spbuttons {
+    display: flex;
+    position: relative;
+    gap: 2rem;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+}
+
+#ctmbutton {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(var(--gradient-angle), #0ce39a, #69007f, #fc0987);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: large;
+    cursor: pointer;
+}
+
+#ctmbutton #ctme {
+    position: relative;
+    cursor: pointer;
+}
+
+#ctmbutton::before {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: linear-gradient(45deg, rgb(63, 63, 63), rgb(0, 0, 0));
+    border-radius: 10px;
+}
+
+
+#ctmbutton:hover {
+    animation: rotateGradient 6s linear infinite;
+}
+
+
+#ctmbutton::before:hover {
+    inset: 1px 1px 1.5px 2px;
+}
+
+@keyframes rotateGradient {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+#ctmbutton::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(15deg, #0ce39a, #69007f, #fc0987);
+    border-radius: 9px;
+    opacity: 0;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+#ctmbutton:hover::after {
+    opacity: 1;
+}
+
+#cvbutton {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: large;
+    transition: all 50ms ease-in-out;
+}
+
+#cvbutton #cvdown {
+    position: relative;
+}
+
+#cvbutton::before {
+    content: "";
+    position: absolute;
+    border-radius: 10px;
+    inset: 2px;
+    background: linear-gradient(180deg, rgba(63, 63, 63, 0.7), rgb(0, 0, 0));
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(17px);
+}
+
+#cvbutton:hover::before {
+    inset: 3px;
+}
+
+#cvbutton:hover {
+    font-weight: 500;
+    background: linear-gradient(315deg, #0ce39a, #69007f, #fc0987);
+}
+
+#cvbutton::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(315deg, #0ce39a, #69007f, #fc0987);
+    border-radius: 9px;
+    transition: 0.3s;
+    opacity: 0;
+    filter: blur(20px);
+    z-index: -1;
+}
+
+#cvbutton:hover::after {
+    opacity: 1;
+}

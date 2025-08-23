@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height" />
+        <meta name="description" content="Saviru Kashmira Atapattu's portfolio." />
+        <meta name="keywords" content="Saviru Kashmira Atapattu, portfolio, web development, programming, saviru, kashmira, saviru kashmira, saviru atapattu" />
+        <meta name="author" content="Saviru Kashmira Atapattu" />
+
+        <title>Saviru Kashmira Atapattu - Portfolio</title>
+        
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="background.css">
+        <link rel="stylesheet" href="buttons.css">
+        <link rel="stylesheet" href="notifications.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    </head>
+    <body>
+        <script src="buttons.js"></script>
+        <!--Navigation Bar-->
+        <nav>
+            <ul class="navbar">
+                <li><a class="page activeLink" href="#">Home</a></li>
+                <li><a class="page" href="#" onclick="showNotification('Unavailable', 'About section is under construction.');">About</a></li>
+                <li><a class="page" href="#" onclick="showNotification('Unavailable', 'Services section is under construction.');">Services</a></li>
+                <li><a class="page" href="#" onclick="showNotification('Unavailable', 'Contact section is under construction.');">Contact</a></li>
+                <li><a class="page" href="#" onclick="showNotification('Unavailable', 'Blog section is under construction.');">Blog</a></li>
+                <span class="toggleMenu"></span>
+            </ul>
+            <script src="navbar.js"></script>   
+        </nav>
+
+        <script src="script.js"></script>
+        <canvas id="background" width="32" height="32"></canvas>
+        <script src="background.js"></script>
+
+        <!--Home-->
+        <header>
+            <p class="welcome-text"><span>Welcome to My Portfolio 2.0</span></p>
+
+            <h1 class="main-heading">Hi, I'm <span class="name-highlight">Saviru</span></h1>
+            <h2>Full Stack Developer</h2>
+            <br>
+            <p class="description">This new version of my portfolio is still a work in progress, but I'm excited to share it with you! Stil you can go to my previous portfolio.</p>
+            <br>
+            <div class="spbuttons">
+                <a id="ctmbutton"><span id="ctme">Go to Portfolio 1.0</span></a>
+            </div>
+            <br>
+            <div class="portfolios">
+                <a href="https://www.linkedin.com/in/saviru-kashmira/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Saviru" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/savii.2k06/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/savii.2k06/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </header>
+
+        <!--Notifications-->
+        <div class="notifications">
+            <span class="notifytop"><span class="notifytitle">Notification</span><i class="fa-solid fa-x"></i></span>
+            <div class="notifybody"><span class="notifyicon"><i class="fa-solid fa-bell"></i></span><span class="notifymsg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, veritatis?</span></div>
+        </div>
+        <script src="notify.js"></script>
+    </body>
+</html>
+    
