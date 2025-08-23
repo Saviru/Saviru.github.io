@@ -9,13 +9,15 @@ let nav = document.querySelector('.nav');
 
 let navigation = document.getElementsByClassName("page");
 
-for (const element of navigation) {
+/*for (const element of navigation) {
   element.addEventListener("click", function() {
     let current = document.getElementsByClassName("activeLink");
     current[0].className = current[0].className.replace(" activeLink", "");
     element.className += " activeLink";
   });
-}
+}*/
+
+
 
 toggleMenu.onclick = function() {
     navbar.classList.toggle('active');
