@@ -41,7 +41,7 @@ header {
 
 header,
 header:before {
-    background: radial-gradient(at bottom left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.400));
+    background: radial-gradient(at bottom left, rgb(0, 0, 0), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.45)), rgba(0, 0, 0, 0.3);
 }
 
 header::before {
@@ -53,11 +53,9 @@ header::before {
     bottom: 0;
     display: block;
     background-size: cover;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
     z-index: -1;
-    height: 105%;
-
+    backdrop-filter: blur(20px);
 }
 
 .databody {

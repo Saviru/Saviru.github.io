@@ -20,7 +20,7 @@
         <script src="buttons.js"></script>
         <!--Navigation Bar-->
         <nav>
-            <ul class="navbar">
+            <ul class="navbar glassify">
                 <li><a class="page activeLink" href="#">Home</a></li>
                 <li><a class="page" href="#" onclick="showNotification('Unavailable', 'About section is under construction.');">About</a></li>
                 <li><a class="page" href="#" onclick="showNotification('Unavailable', 'Services section is under construction.');">Projects</a></li>
@@ -32,11 +32,12 @@
         </nav>
 
         <script src="script.js"></script>
-        <canvas id="background" width="32" height="32"></canvas>
-        <script src="background.js"></script>
+        
 
         <!--Home-->
         <header>
+            <canvas id="background" width="32" height="32"></canvas>
+            <script src="background.js"></script>
             <p class="welcome-text"><span>Welcome to My Portfolio 2.0</span></p>
 
             <h1 class="main-heading">Hi, I'm <span class="name-highlight">Saviru</span></h1>
@@ -61,7 +62,9 @@
             <span class="notifytop"><span class="notifytitle">Notification</span><i class="fa-solid fa-x"></i></span>
             <div class="notifybody"><span class="notifyicon"><i class="fa-solid fa-bell"></i></span><span class="notifymsg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, veritatis?</span></div>
         </div>
+        <glassi-fy></glassi-fy>
         <script src="notify.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/Saviru/GlassiFy@1.0.0/glassify.js"></script>
     </body>
 </html>
     
