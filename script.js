@@ -15,4 +15,3 @@ window.addEventListener("resize", function() {
     document.body.style.height = header.clientHeight + databody.clientHeight + 'px';
     
 }, false);
-
