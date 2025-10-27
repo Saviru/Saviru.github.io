@@ -49,10 +49,13 @@
 
 @keyframes rotateGradient {
   0% {
-    --gradient-angle: 0deg;
+    --gradient-angle: 45deg;
+  }
+  20% {
+    --gradient-angle: 150deg;
   }
   100% {
-    --gradient-angle: 360deg;
+    --gradient-angle: 405deg;
   }
 }
 
